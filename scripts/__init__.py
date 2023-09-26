@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 import pandas as pd
 
@@ -6,7 +8,8 @@ st.write("""
 Hello world by Saida
 """)
 
-df = pd.read_csv("./scripts/temperature.csv")
+df = pd.read_csv(os.path.join("scripts", "temperature.csv"))
+
 df.dropna(inplace=True)
 df.reset_index(drop=True)
 
