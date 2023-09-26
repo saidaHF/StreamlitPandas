@@ -6,7 +6,7 @@ st.write("""
 Hello world by Saida
 """)
 
-df = pd.read_csv("C:\\Users\\Saida\\Desktop\\streamlit_test\\scripts\\temperature.csv")
+df = pd.read_csv(".\\scripts\\temperature.csv")
 df.dropna(inplace=True)
 df.reset_index(drop=True)
 
