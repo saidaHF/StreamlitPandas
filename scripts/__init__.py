@@ -2,11 +2,15 @@ import os
 
 import streamlit as st
 import pandas as pd
+from PIL import Image
 
 st.write("""
 # Hey ☜(ﾟヮﾟ☜)
-Hello world by Saida
+Welcome to my page!
 """)
+
+image = Image.open(os.path.join("images", "me_image.jpg"))
+st.image(image, caption='Hi! This is me!', width=200)
 
 df = pd.read_csv(os.path.join("scripts", "temperature.csv"))
 df.dropna(inplace=True)
